@@ -75,4 +75,20 @@ export function initLamp() {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !on) toggle();
   });
+
+  // phone / tablet: retract the lamp up + out of the way once the page scrolls
+  const mq = window.matchMedia('(max-width: 1024px)');
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      const stow = mq.matches && on && window.scrollY > 60;
+      lamp.classList.toggle('lamp--stow', stow);
+    });
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  mq.addEventListener?.('change', onScroll);
+  onScroll();
 }

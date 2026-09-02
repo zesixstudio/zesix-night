@@ -6,12 +6,49 @@
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export function initArtwork() {
+  reels();
   if (reduced) return;
   document.querySelectorAll('canvas[data-artwork]').forEach((cv) => {
     const kind = cv.dataset.artwork;
     if (kind === 'beam') beam(cv);
     if (kind === 'constellation') constellation(cv);
   });
+}
+
+/* Hero: three tilted, infinitely-scrolling film reels of client creative. */
+function reels() {
+  const host = document.querySelector('[data-reels]');
+  if (!host || host.childElementCount) return;
+
+  const STRIPS = [
+    {
+      dir: 'up',
+      dur: 34,
+      imgs: ['classic-group/posts/01', 'ruchikara/posts/01', 'kaaya-unisex-salon/posts/01', 'gymsane/posts/01', 'riston-automobiles/posts/01', 'classic-group/posts/03'],
+    },
+    {
+      dir: 'down',
+      dur: 42,
+      imgs: ['ruchikara/posts/02', 'kaaya-unisex-salon/posts/02', 'gymsane/posts/02', 'riston-automobiles/posts/02', 'classic-group/posts/02', 'ruchikara/posts/03'],
+    },
+    {
+      dir: 'up',
+      dur: 38,
+      imgs: ['kaaya-unisex-salon/posts/03', 'gymsane/posts/03', 'classic-group/posts/04', 'riston-automobiles/posts/03', 'ruchikara/posts/04', 'gymsane/posts/04'],
+    },
+  ];
+
+  host.innerHTML = STRIPS.map((s, i) => {
+    const frames = s.imgs
+      .map(
+        (p) =>
+          `<span class="reel__frame"><img src="/assets/portfolio/${p}.jpg" alt="" loading="lazy" decoding="async"/></span>`,
+      )
+      .join('');
+    return `<div class="reel reel--${s.dir}" style="--dur:${s.dur}s;--n:${i}">
+      <div class="reel__strip">${frames}${frames}</div>
+    </div>`;
+  }).join('');
 }
 
 function fit(cv) {

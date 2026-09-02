@@ -1,0 +1,52 @@
+<svg class="handshake" viewBox="0 0 440 340" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="hsg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--sec-accent)"/>
+      <stop offset="1" stop-color="var(--color-blue-bright)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- circuit halo -->
+  <g class="hs-halo" stroke="var(--sec-accent)" stroke-opacity="0.35" stroke-width="1.5">
+    <circle cx="220" cy="170" r="128" stroke-dasharray="4 10"/>
+    <circle cx="220" cy="170" r="150" stroke-dasharray="2 14" stroke-opacity="0.2"/>
+    <circle cx="92" cy="170" r="3" fill="var(--sec-accent)" stroke="none"/>
+    <circle cx="348" cy="170" r="3" fill="var(--sec-accent)" stroke="none"/>
+    <circle cx="220" cy="42" r="3" fill="var(--sec-accent)" stroke="none"/>
+    <circle cx="220" cy="298" r="3" fill="var(--sec-accent)" stroke="none"/>
+  </g>
+
+  <!-- HUMAN forearm + hand, entering lower-left, reaching up-right -->
+  <g class="hs-human" stroke="var(--color-text)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M28 300 L120 236"/>
+    <path d="M120 236 q18 -14 40 -12 l52 6"/>
+    <!-- fingers curling over the grip -->
+    <path d="M212 230 q26 -2 40 8 q10 8 6 20"/>
+    <path d="M206 244 q24 0 36 10"/>
+    <!-- thumb -->
+    <path d="M150 224 q10 -20 30 -20"/>
+  </g>
+
+  <!-- MACHINE forearm + hand, entering upper-right, reaching down-left -->
+  <g class="hs-robot" stroke="url(#hsg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M412 40 L320 104"/>
+    <rect x="286" y="96" width="34" height="30" rx="5" fill="var(--sec-accent)" fill-opacity="0.14"/>
+    <path d="M320 104 q-18 14 -40 12 l-52 -6"/>
+    <path d="M228 110 q-26 2 -40 -8 q-10 -8 -6 -20"/>
+    <path d="M234 96 q-24 0 -36 -10"/>
+    <path d="M290 116 q-10 20 -30 20"/>
+    <!-- knuckle joints -->
+    <circle cx="196" cy="108" r="4" fill="var(--sec-accent)" stroke="none"/>
+    <circle cx="182" cy="86" r="4" fill="var(--sec-accent)" stroke="none"/>
+    <circle cx="320" cy="104" r="5" fill="var(--sec-accent)" stroke="none"/>
+  </g>
+
+  <!-- clasp glow + spark -->
+  <g class="hs-core">
+    <circle cx="220" cy="170" r="16" fill="url(#hsg)" fill-opacity="0.25"/>
+    <circle cx="220" cy="170" r="6" fill="#fff"/>
+    <g class="hs-spark" stroke="#fff" stroke-width="3" stroke-linecap="round">
+      <path d="M220 146v-14M220 208v14M244 170h14M182 170h-14M238 152l10-10M192 198l-10 10"/>
+    </g>
+  </g>
+</svg>

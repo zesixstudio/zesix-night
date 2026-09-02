@@ -10,6 +10,7 @@
 @import './pages.css';
 @import './interior.css';
 @import './interior-extra.css';
+@import './batch3.css';
 
 @theme {
   --font-sans: 'Geist Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;

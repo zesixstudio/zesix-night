@@ -81,7 +81,7 @@ function pageHTML(svc, prev, next) {
       <p class="label" data-reveal>Service</p>
       <h1 class="text-display" data-reveal>${esc(svc.name)}</h1>
       <p class="svc-hero__line text-lead" data-reveal>${esc(svc.long)}</p>
-      <a class="btn" href="/contact.html" data-magnetic data-reveal data-cursor="Go">Start a project</a>
+      <a class="btn" href="tel:{{site.contact.phoneDial}}" data-magnetic data-reveal data-cursor="Call">Call now</a>
     </div>
   </section>
 
@@ -116,7 +116,7 @@ function pageHTML(svc, prev, next) {
     </div>
   </nav>
 
-  {{> cta heading="Need ${esc(svc.name.toLowerCase())}?" cta="Book a call" }}
+  {{> cta heading="Need ${esc(svc.name.toLowerCase())}?" callNow=true cta="Call now" }}
 </main>
 
 {{> footer }}

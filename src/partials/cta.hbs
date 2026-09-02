@@ -4,7 +4,11 @@
     <p class="label">{{#if eyebrow}}{{eyebrow}}{{else}}Next step{{/if}}</p>
     <h2 class="text-h2">{{#if heading}}{{heading}}{{else}}Let's make your brand impossible to scroll past.{{/if}}</h2>
     <div class="ctaband__actions">
+      {{#if callNow}}
+      <a class="btn" href="tel:{{site.contact.phoneDial}}" data-magnetic data-cursor="Call">{{#if cta}}{{cta}}{{else}}Call now{{/if}}</a>
+      {{else}}
       <a class="btn" href="/contact.html" data-magnetic data-cursor="Go">{{#if cta}}{{cta}}{{else}}Start a project{{/if}}</a>
+      {{/if}}
       <a class="btn btn-ghost" href="#" data-wa="{{site.contact.whatsapp}}" data-wa-msg="{{site.contact.whatsappMessage}}" data-cursor="Chat">WhatsApp us</a>
     </div>
   </div>

@@ -25,10 +25,7 @@
         {{#each services}}
         <li class="svc-tile glass glass-panel" data-reveal-child data-tilt data-svc-color="{{this.color}}">
           <a href="/services/{{this.slug}}.html" data-cursor="Open">
-            <div class="svc-tile__art">
-              <img src="{{this.card}}" alt="{{this.name}} work by Zesix Studio" loading="lazy"
-                   onerror="this.closest('.svc-tile__art').classList.add('is-noimg')" />
-            </div>
+            <div class="svc-tile__art">{{> svc-art art=this.art }}</div>
             <div class="svc-tile__body">
               <span class="svc-tile__no">{{pad2 @index}}</span>
               <h2>{{this.name}}</h2>
@@ -50,11 +47,9 @@
       <p class="label">How engagements work</p>
       <h2 class="text-h2">One brief. One team. One brand.</h2>
       <p class="text-lead">You don't buy services off a menu. We scope a single engagement around what the brand needs this quarter — usually a few of these together — and run it as one plan. Pricing is quoted after a short call.</p>
-      <a class="btn" href="/contact.html" data-magnetic data-cursor="Go">Book a discovery call</a>
+      <a class="btn" href="tel:{{site.contact.phoneDial}}" data-magnetic data-cursor="Call">Call now</a>
     </div>
   </section>
-
-  {{> cta heading="Not sure which you need?" cta="Book a call" }}
 </main>
 
 {{> footer }}

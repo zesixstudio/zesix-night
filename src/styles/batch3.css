@@ -1,0 +1,155 @@
+/* Batch-3 change set: hero/services/CTA tweaks, WhatsApp glass, mobile menu,
+   founder photo, service-page SVGs, portfolio teal. Loaded last from tailwind.css. */
+
+@layer components {
+  /* ---- (18) WhatsApp float: frosted glass, always visible ---- */
+  .wa-float {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 47;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-pill);
+    color: var(--sec-accent, var(--color-blue));
+    background: color-mix(in srgb, var(--sec-accent, #88bee6) 16%, rgba(14, 18, 24, 0.55));
+    backdrop-filter: blur(16px) saturate(1.5);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    border: 1px solid color-mix(in srgb, var(--sec-accent, #88bee6) 45%, transparent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 24px color-mix(in srgb, var(--sec-accent, #88bee6) 28%, transparent);
+    transition: transform 0.4s var(--ease-out-expo), box-shadow 0.3s ease;
+  }
+  .wa-float:hover {
+    transform: scale(1.08) rotate(-6deg);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45), 0 0 34px color-mix(in srgb, var(--sec-accent, #88bee6) 45%, transparent);
+  }
+  .wa-float svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ---- (19) mobile / tablet menu: 10% opaque frosted glass ---- */
+  .hdr__panel {
+    background: color-mix(in srgb, var(--color-bg) 10%, transparent) !important;
+    backdrop-filter: blur(26px) saturate(1.6);
+    -webkit-backdrop-filter: blur(26px) saturate(1.6);
+    border-top: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  }
+
+  /* ---- (9) "ready to grow" CTA band ---- */
+  .grow-cta {
+    text-align: center;
+    overflow: hidden;
+  }
+  .grow-cta__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+  .grow-cta__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* ---- (13) service icon SVGs (home grid + services page) ---- */
+  .svc-svg {
+    width: 100%;
+    height: 100%;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    overflow: visible;
+  }
+  .svc-tile__art .svc-svg {
+    width: 46%;
+    height: 46%;
+    color: var(--color-text);
+  }
+  .svc-tile__art {
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(80% 80% at 50% 20%, color-mix(in srgb, var(--sec-accent) 16%, transparent), transparent 70%),
+      var(--color-surface-2);
+  }
+  .svc-tile:hover .svc-tile__art .svc-svg {
+    transform: scale(1.08) rotate(-3deg);
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+
+  /* ---- (11) AI handshake artwork ---- */
+  .ai__art .handshake {
+    width: min(100%, 32rem);
+    height: auto;
+    overflow: visible;
+  }
+  .hs-halo {
+    transform-box: view-box;
+    transform-origin: 220px 170px;
+    animation: haloSpin 60s linear infinite;
+  }
+  @keyframes haloSpin {
+    to { transform: rotate(360deg); }
+  }
+  .hs-core circle:first-child {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: corePulse 3.4s ease-in-out infinite;
+  }
+  @keyframes corePulse {
+    0%, 100% { transform: scale(1); opacity: 0.25; }
+    50% { transform: scale(1.35); opacity: 0.4; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hs-halo,
+    .hs-core circle:first-child {
+      animation: none;
+    }
+  }
+
+  /* ---- (20) founder photo ---- */
+  .founder__badge {
+    width: 9.5rem;
+    height: 9.5rem;
+    padding: 0;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+  .founder__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media (min-width: 760px) {
+    .founder__badge {
+      width: 12rem;
+      height: 14rem;
+    }
+  }
+
+  /* ---- (16) portfolio cards: no brand name over the logo ---- */
+  .wl-card__media img {
+    max-width: 74%;
+    max-height: 66%;
+  }
+  .wl-card__ghost {
+    display: none;
+  }
+  .wl-card__media.is-noimg .wl-card__ghost {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--color-text) 30%, transparent);
+  }
+}
