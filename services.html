@@ -1,0 +1,60 @@
+<head>
+{{> head
+    title="Services — Zesix Studio"
+    description="Digital marketing services from Zesix Studio: social media management, creative design, video production, influencer marketing, branding and paid campaigns."
+    path="/services.html"
+}}
+</head>
+
+{{> lamp }}
+{{> header }}
+
+<main id="main" data-theme="blue">
+  <section class="phero grain">
+    <div class="glow-blue" style="width:44rem;height:44rem;left:-12rem;top:-12rem"></div>
+    <div class="container-x">
+      <p class="label" data-reveal>Services</p>
+      <h1 class="text-display" data-reveal>One team for the whole funnel.</h1>
+      <p class="phero__sub text-lead" data-reveal>Strategy, creative and media &mdash; run together, so nothing contradicts anything else. Each one has its own page with real work. Engagements are scoped and quoted after a short call.</p>
+    </div>
+  </section>
+
+  <section class="section svc-index">
+    <div class="container-x">
+      <ul class="svc-index__grid" data-reveal-group>
+        {{#each services}}
+        <li class="svc-tile glass glass-panel" data-reveal-child data-tilt data-svc-color="{{this.color}}">
+          <a href="/services/{{this.slug}}.html" data-cursor="Open">
+            <div class="svc-tile__art">
+              <img src="{{this.card}}" alt="{{this.name}} work by Zesix Studio" loading="lazy"
+                   onerror="this.closest('.svc-tile__art').classList.add('is-noimg')" />
+            </div>
+            <div class="svc-tile__body">
+              <span class="svc-tile__no">{{pad2 @index}}</span>
+              <h2>{{this.name}}</h2>
+              <p>{{this.line}}</p>
+              <ul class="svc-tile__pts">
+                {{#each this.points}}<li>{{this}}</li>{{/each}}
+              </ul>
+              <span class="svc-tile__go">Explore {{this.short}} &rarr;</span>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section band-glass" data-theme="teal">
+    <div class="container-x combo glass glass-panel" data-reveal>
+      <p class="label">How engagements work</p>
+      <h2 class="text-h2">One brief. One team. One brand.</h2>
+      <p class="text-lead">You don't buy services off a menu. We scope a single engagement around what the brand needs this quarter — usually a few of these together — and run it as one plan. Pricing is quoted after a short call.</p>
+      <a class="btn" href="/contact.html" data-magnetic data-cursor="Go">Book a discovery call</a>
+    </div>
+  </section>
+
+  {{> cta heading="Not sure which you need?" cta="Book a call" }}
+</main>
+
+{{> footer }}

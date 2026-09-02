@@ -1,0 +1,18 @@
+<!-- Hanging lamp: ON by default via CSS. JS (lamp.js) wires the pull-cord toggle. -->
+<div class="lamp" data-lamp aria-pressed="true">
+  <div class="lamp__wire"></div>
+  <div class="lamp__shade">
+    <div class="lamp__bulb"></div>
+  </div>
+  <div class="lamp__beam" aria-hidden="true"></div>
+  <button type="button" class="lamp__cord" data-lamp-cord aria-label="Turn the lamp off">
+    <span class="lamp__cord-line"></span>
+    <span class="lamp__cord-knob"></span>
+  </button>
+</div>
+
+<!-- Shown only when the lamp is OFF (body.lamp-off) -->
+<div class="blackout" role="status">
+  <p class="blackout__headline">{{site.lamp.offHeadline}}</p>
+  <p class="blackout__sub">{{site.lamp.offSubline}}</p>
+</div>

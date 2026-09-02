@@ -1,0 +1,241 @@
+<head>
+{{> head
+    title="Zesix Studio — Digital marketing that's impossible to scroll past"
+    description="Zesix Studio is a Raipur digital marketing company. Social media, creative, reels, AI video, influencer marketing, branding and campaigns that connect and convert."
+    path="/"
+}}
+</head>
+
+{{> lamp }}
+{{> header }}
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero grain" data-theme="black">
+    <div class="container-x hero__grid">
+      <div class="hero__copy">
+        <p class="label" data-reveal>{{site.kind}} · {{site.city}} · {{site.experienceYears}} years</p>
+        <h1 class="hero__title text-display">
+          <span data-reveal>We make brands</span>
+          <span data-reveal>impossible to</span>
+          <span class="hero__accent" data-reveal>scroll past.</span>
+        </h1>
+        <p class="hero__sub text-lead" data-reveal>{{site.subline}}</p>
+        <div class="hero__cta" data-reveal>
+          <a class="btn" href="/portfolio.html" data-magnetic data-cursor="View">See the work</a>
+          <a class="btn btn-ghost" href="#" data-wa="{{site.contact.whatsapp}}" data-wa-msg="{{site.contact.whatsappMessage}}" data-cursor="Chat">WhatsApp us</a>
+        </div>
+        <p class="hero__hint" data-reveal>Pull the cord. We'll wait.</p>
+      </div>
+
+      <!-- looping "creative engine" artwork: real client designs orbiting an idea core -->
+      <div class="orbit" data-reveal aria-hidden="true">
+        <div class="orbit__core">
+          <svg viewBox="0 0 120 120" width="120" height="120">
+            <defs>
+              <radialGradient id="oc" cx="50%" cy="45%" r="60%">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="45%" stop-color="var(--color-blue-bright)"/>
+                <stop offset="100%" stop-color="var(--color-blue-deep)"/>
+              </radialGradient>
+            </defs>
+            <circle cx="60" cy="60" r="30" fill="url(#oc)"/>
+            <g stroke="rgba(10,21,32,.55)" stroke-width="2" fill="none" stroke-linecap="round">
+              <path d="M60 40c-9 0-14 7-14 14 0 6 3 9 3 14M60 40c9 0 14 7 14 14 0 6-3 9-3 14"/>
+              <path d="M52 68h16M55 76h10"/>
+              <circle cx="60" cy="34" r="3" fill="rgba(10,21,32,.55)" stroke="none"/>
+            </g>
+          </svg>
+        </div>
+        <div class="orbit__ring">
+          <span class="orbit__chip"><img src="/assets/portfolio/classic-group/posts/01.jpg" alt="" loading="lazy" /></span>
+          <span class="orbit__chip"><img src="/assets/portfolio/ruchikara/posts/02.jpg" alt="" loading="lazy" /></span>
+          <span class="orbit__chip"><img src="/assets/portfolio/kaaya-unisex-salon/posts/03.jpg" alt="" loading="lazy" /></span>
+          <span class="orbit__chip"><img src="/assets/portfolio/gymsane/posts/01.jpg" alt="" loading="lazy" /></span>
+          <span class="orbit__chip"><img src="/assets/portfolio/riston-automobiles/posts/02.jpg" alt="" loading="lazy" /></span>
+          <span class="orbit__chip"><img src="/assets/portfolio/classic-group/posts/04.jpg" alt="" loading="lazy" /></span>
+        </div>
+        <span class="orbit__spark orbit__spark--1"></span>
+        <span class="orbit__spark orbit__spark--2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT MARQUEE -->
+  <section class="marq" data-theme="black" aria-label="Selected clients">
+    <div class="marq__track" data-marquee>
+      <ul class="marq__row">
+        {{#each projects}}<li>{{this.name}}</li>{{/each}}
+        {{#each projects}}<li aria-hidden="true">{{this.name}}</li>{{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES — stacked parallax cards -->
+  <section class="stack" data-theme="blue" data-stack>
+    <div class="container-x">
+      <div class="sec-head" data-reveal>
+        <p class="label">What we do</p>
+        <h2 class="text-h2">Six ways we grow a brand.</h2>
+      </div>
+    </div>
+    <div class="stack__list">
+      {{#each services}}
+      <article class="stack-card" style="--i:{{@index}}">
+        <div class="stack-card__inner glass glass-panel">
+          <div class="stack-card__body">
+            <span class="stack-card__no">{{pad2 @index}} / 06</span>
+            <h3>{{this.name}}</h3>
+            <p>{{this.line}}</p>
+            <a class="btn btn-ghost" href="/services/{{this.slug}}.html" data-cursor="Open">Know more</a>
+          </div>
+          <div class="stack-card__art">
+            <img src="{{this.card}}" alt="{{this.name}} work by Zesix Studio" loading="lazy"
+                 onerror="this.closest('.stack-card__art').classList.add('is-noimg')" />
+          </div>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- AI + HUMAN HANDSHAKE -->
+  <section class="section ai grain" data-theme="teal">
+    <div class="container-x ai__grid">
+      <div class="ai__copy" data-reveal>
+        <p class="label">Human + machine</p>
+        <h2 class="text-h2">We shook hands with the machines.</h2>
+        <p class="text-lead">Marketing changed. We changed with it. Zesix pairs a human eye for taste and story with the latest AI models for speed and scale &mdash; AI-driven reels, concepting, iteration and production. You get work that feels made, not generated.</p>
+        <a class="btn" href="/services/video-production.html" data-magnetic data-cursor="See">See AI-driven work</a>
+      </div>
+      <div class="ai__art" data-reveal aria-hidden="true">
+        <svg viewBox="0 0 420 300" class="handshake">
+          <defs>
+            <linearGradient id="hg" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="var(--sec-accent)"/>
+              <stop offset="1" stop-color="var(--color-blue-bright)"/>
+            </linearGradient>
+          </defs>
+          <!-- human arm (left) -->
+          <g class="hs-human">
+            <path d="M20 160 L150 150 q20 -2 34 10 l26 22" fill="none" stroke="var(--color-text)" stroke-width="16" stroke-linecap="round"/>
+            <path d="M150 150 q22 4 40 20 l14 14" fill="none" stroke="var(--color-text)" stroke-width="12" stroke-linecap="round"/>
+          </g>
+          <!-- robot arm (right) -->
+          <g class="hs-robot">
+            <path d="M400 160 L270 150 q-22 -2 -38 10 l-24 22" fill="none" stroke="url(#hg)" stroke-width="16" stroke-linecap="round"/>
+            <rect x="250" y="132" width="26" height="26" rx="4" fill="url(#hg)"/>
+            <rect x="300" y="140" width="16" height="16" rx="3" fill="var(--sec-accent)"/>
+            <rect x="336" y="146" width="12" height="12" rx="3" fill="var(--sec-accent)"/>
+          </g>
+          <!-- spark where they meet -->
+          <g class="hs-spark" transform="translate(210 176)">
+            <circle r="6" fill="#fff"/>
+            <path d="M0 -22 L4 -6 L20 -3 L6 4 L9 21 L0 8 L-9 21 L-6 4 L-20 -3 L-4 -6 Z" fill="#fff"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section work-home" data-theme="orange">
+    <div class="container-x">
+      <div class="sec-head sec-head--row" data-reveal>
+        <div>
+          <p class="label">Selected work</p>
+          <h2 class="text-h2">Brands we've grown.</h2>
+        </div>
+        <a class="btn btn-ghost" href="/portfolio.html" data-cursor="View">All work</a>
+      </div>
+      <div class="work-home__list">
+        {{#each caseStudies}}
+        <a class="work-home__item" href="/portfolio/{{this.slug}}.html" data-reveal data-cursor="Open" data-tilt>
+          <div class="work-home__media">
+            <img src="{{this.logo}}" alt="{{this.name}} logo" loading="lazy"
+                 onerror="this.closest('.work-home__media').classList.add('is-noimg')" />
+            <span class="work-home__ghost" aria-hidden="true">{{this.name}}</span>
+          </div>
+          <div class="work-home__meta">
+            <span class="work-home__cat">{{this.category}}</span>
+            <h3>{{this.name}}</h3>
+            <p>{{this.intro}}</p>
+            {{#if this.highlights}}
+            <ul class="work-home__hl">
+              {{#each this.highlights}}<li><b>{{this.value}}{{this.suffix}}</b> {{this.label}}</li>{{/each}}
+            </ul>
+            {{/if}}
+          </div>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / RESULTS -->
+  <section class="section results grain" data-theme="grey">
+    <div class="glow-blue" style="width:50rem;height:50rem;left:-10rem;top:-10rem"></div>
+    <div class="container-x">
+      <div class="sec-head" data-reveal>
+        <p class="label">By the numbers</p>
+        <h2 class="text-h2">Four years, and counting.</h2>
+      </div>
+      <div class="results__grid" data-reveal-group>
+        <div class="stat" data-reveal-child><span class="stat__v"><span data-count="4">0</span>+</span><span class="stat__l">Years in the industry</span></div>
+        <div class="stat" data-reveal-child><span class="stat__v"><span data-count="20">0</span>+</span><span class="stat__l">Happy clients</span></div>
+        <div class="stat" data-reveal-child><span class="stat__v"><span data-count="3500">0</span>+</span><span class="stat__l">Creative designs shipped</span></div>
+        <div class="stat" data-reveal-child><span class="stat__v"><span data-count="500">0</span>+</span><span class="stat__l">Leads generated for Classic Group</span></div>
+        <div class="stat" data-reveal-child><span class="stat__v"><span data-count="300">0</span>+</span><span class="stat__l">Followers from one Customise World reel, organically</span></div>
+        <div class="stat" data-reveal-child><span class="stat__v">6</span><span class="stat__l">Featured brands in the portfolio</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section tmn" data-theme="grey">
+    <div class="container-x">
+      <div class="sec-head" data-reveal>
+        <p class="label">Word of mouth</p>
+        <h2 class="text-h2">What clients say.</h2>
+      </div>
+      <div class="tmn__wrap">
+        <div class="tmn__reel glass glass-panel" data-reveal>
+          <iframe src="{{testimonials.reel.embed}}" title="{{testimonials.reel.caption}}" loading="lazy" allowtransparency="true"></iframe>
+        </div>
+        <ul class="tmn__list" data-reveal-group>
+          {{#each testimonials.items}}
+          <li class="tmn__card" data-reveal-child>
+            <p class="tmn__quote">&ldquo;{{this.quote}}&rdquo;</p>
+            <p class="tmn__cite"><b>{{this.name}}</b> — {{this.brand}}</p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <ul class="tmn__tags" aria-hidden="true">
+        {{#each testimonials.tags}}<li>{{this}}</li>{{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process" data-theme="blue">
+    <div class="container-x">
+      <div class="sec-head" data-reveal>
+        <p class="label">How we work</p>
+        <h2 class="text-h2">From brief to growth.</h2>
+      </div>
+      <ol class="process__steps" data-reveal-group>
+        <li data-reveal-child><span>01</span><h3>Discover</h3><p>We learn the brand, the market and the goal.</p></li>
+        <li data-reveal-child><span>02</span><h3>Strategy</h3><p>Positioning, content direction and a plan for the quarter.</p></li>
+        <li data-reveal-child><span>03</span><h3>Create</h3><p>Creative, reels, AI video and campaigns — produced as sets.</p></li>
+        <li data-reveal-child><span>04</span><h3>Amplify</h3><p>We publish, run the media and push reach.</p></li>
+        <li data-reveal-child><span>05</span><h3>Grow</h3><p>Monthly review, then next month built on what worked.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  {{> cta }}
+</main>
+
+{{> footer }}

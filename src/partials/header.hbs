@@ -1,0 +1,34 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr" data-header>
+  <div class="container-x hdr__inner">
+    <a class="hdr__brand" href="/" aria-label="Zesix Studio — home">{{> logo }}</a>
+
+    <nav class="hdr__nav glass" aria-label="Primary">
+      <span class="hdr__nav-bubble" data-nav-bubble aria-hidden="true"></span>
+      {{#each site.nav}}<a data-nav-link href="{{this.href}}">{{this.label}}</a>{{/each}}
+    </nav>
+
+    <div class="hdr__actions">
+      <a class="btn hdr__cta" href="/contact.html" data-magnetic data-cursor="Let's talk">Let's talk</a>
+      <button class="hdr__burger" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="hdr__panel" id="menu" data-menu-panel hidden>
+    <nav aria-label="Mobile">
+      {{#each site.nav}}<a data-nav-link href="{{this.href}}">{{this.label}}</a>{{/each}}
+    </nav>
+    <a class="btn" href="/contact.html">Let's talk</a>
+    <div class="hdr__panel-meta">
+      <a href="tel:{{site.contact.phoneDial}}">{{site.contact.phone}}</a>
+      <a href="#" data-wa="{{site.contact.whatsapp}}" data-wa-msg="{{site.contact.whatsappMessage}}">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<a class="wa-float glass" href="#" data-wa="{{site.contact.whatsapp}}" data-wa-msg="{{site.contact.whatsappMessage}}"
+   target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-cursor="Chat">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.34 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96 0-2.66-1.04-5.16-2.92-7.04A9.9 9.9 0 0 0 12.04 2Zm5.8 14.06c-.25.7-1.44 1.33-1.99 1.38-.53.05-1.02.24-3.42-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.39.25-.28.55-.35.74-.35.19 0 .37 0 .53.01.17.01.4-.06.62.48.25.6.85 2.07.92 2.22.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.37-.42.49-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.32.07.12.07.68-.18 1.38Z"/></svg>
+</a>

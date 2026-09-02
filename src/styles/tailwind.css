@@ -1,0 +1,371 @@
+@import 'tailwindcss';
+
+@import '@fontsource/bricolage-grotesque/latin-400.css';
+@import '@fontsource/bricolage-grotesque/latin-500.css';
+@import '@fontsource/bricolage-grotesque/latin-700.css';
+@import '@fontsource/geist-sans/latin-400.css';
+@import '@fontsource/geist-sans/latin-500.css';
+@import '@fontsource/geist-mono/latin-400.css';
+
+@import './pages.css';
+@import './interior.css';
+@import './interior-extra.css';
+
+@theme {
+  --font-sans: 'Geist Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --color-bg: #0a0b0d;
+  --color-surface: #14171b;
+  --color-surface-2: #1b1f24;
+  --color-line: #262a30;
+  --color-line-soft: #1c2025;
+  --color-text: #f2f3f5;
+  --color-muted: #9aa1a9;
+  --color-faint: #6a7079;
+
+  --color-blue: #88bee6;
+  --color-blue-bright: #b9dcf4;
+  --color-blue-deep: #4c87b0;
+  --color-blue-ink: #0a1520;
+
+  --color-paper: #f4f4f0;
+  --color-ink: #0c0d0f;
+
+  --radius: 6px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --glow: 0 0 40px rgba(136, 190, 230, 0.28);
+
+  /* section theme palette — JS (theme-scroll.js) swaps --page-bg / --sec-accent
+     on <body> as themed sections scroll through the viewport (fondof-style). */
+  --page-bg: #0a0b0d;
+  --sec-accent: #88bee6;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: transparent;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  /* fixed colour backdrop that eases between section themes */
+  .page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: var(--page-bg);
+    transition: background-color 0.7s var(--ease-out-expo);
+  }
+  .no-js body,
+  body:not(.has-page-bg) {
+    background: var(--color-bg);
+  }
+
+  /* theme fallbacks so a page renders right before JS runs */
+  [data-theme='blue'] {
+    --page-bg: #0b1622;
+    --sec-accent: #88bee6;
+  }
+  [data-theme='teal'] {
+    --page-bg: #08201e;
+    --sec-accent: #5eead4;
+  }
+  [data-theme='orange'] {
+    --page-bg: #1e1712;
+    --sec-accent: #f4b183;
+  }
+  [data-theme='grey'] {
+    --page-bg: #141517;
+    --sec-accent: #c7cdd4;
+  }
+  [data-theme='black'] {
+    --page-bg: #0a0b0d;
+    --sec-accent: #88bee6;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  h3,
+  h4 {
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+  p {
+    margin: 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  img,
+  video,
+  iframe {
+    display: block;
+    max-width: 100%;
+  }
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ::selection {
+    background: var(--color-blue);
+    color: var(--color-blue-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* custom cursor: hide native only when the enhancement is active */
+  html.has-cursor,
+  html.has-cursor * {
+    cursor: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ======================================================================
+   Reveals — IntersectionObserver toggles .in-view; .motion-done is the
+   failsafe that force-shows everything. Content is visible without JS.
+   ==================================================================== */
+@layer utilities {
+  .js-anim [data-reveal],
+  .js-anim [data-reveal-child] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.75s var(--ease-out-expo),
+      transform 0.75s var(--ease-out-expo);
+  }
+  .js-anim [data-reveal].in-view,
+  .js-anim [data-reveal-child].in-view,
+  .js-anim.motion-done [data-reveal],
+  .js-anim.motion-done [data-reveal-child] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .text-display {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 8vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+  .text-h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+  }
+  .text-lead {
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    line-height: 1.55;
+    color: var(--color-muted);
+  }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 82rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-x {
+      padding-inline: 2.5rem;
+    }
+  }
+  .section {
+    padding-block: clamp(4.5rem, 10vw, 8rem);
+    position: relative;
+  }
+
+  /* mono eyebrow / labels */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sec-accent, var(--color-blue));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.6s var(--ease-out-expo);
+  }
+  .label::before {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  /* buttons */
+  .btn {
+    --bg: var(--sec-accent, var(--color-blue));
+    --fg: var(--color-blue-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.95rem 1.5rem;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    border: 1px solid transparent;
+    background: var(--bg);
+    color: var(--fg);
+    transition:
+      transform 0.4s var(--ease-out-expo),
+      box-shadow 0.3s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+    will-change: transform;
+  }
+  .btn:hover {
+    box-shadow: var(--glow);
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-text);
+    border-color: var(--color-line);
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-blue);
+    box-shadow: none;
+    color: var(--color-blue);
+  }
+
+  .link-u {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.4s var(--ease-out-expo);
+    padding-bottom: 2px;
+  }
+  .link-u:hover {
+    background-size: 100% 1px;
+  }
+
+  /* film grain + glow helpers */
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+  .grain > * {
+    position: relative;
+    z-index: 1;
+  }
+  .glow-blue {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--sec-accent, #88bee6) 18%, transparent), transparent 70%);
+    filter: blur(30px);
+    pointer-events: none;
+    z-index: 0;
+    transition: background 0.7s var(--ease-out-expo);
+  }
+
+  .rule {
+    height: 1px;
+    background: var(--color-line);
+    border: 0;
+  }
+
+  /* ---- Apple-style frosted glass ---- */
+  .glass {
+    background: color-mix(in srgb, var(--sec-accent, #88bee6) 8%, rgba(18, 22, 28, 0.55));
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    border: 1px solid color-mix(in srgb, var(--sec-accent, #88bee6) 22%, transparent);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 12px 40px rgba(0, 0, 0, 0.35);
+  }
+  .glass-panel {
+    border-radius: var(--radius-lg);
+  }
+
+  /* ---- bubble selector (nav + filter chips) ---- */
+  .bubble-wrap {
+    position: relative;
+    display: inline-flex;
+    padding: 0.3rem;
+    border-radius: var(--radius-pill);
+  }
+  .bubble {
+    position: absolute;
+    top: 0.3rem;
+    height: calc(100% - 0.6rem);
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--sec-accent, #88bee6) 90%, white 0%);
+    opacity: 0;
+    transition:
+      transform 0.5s var(--ease-out-expo),
+      width 0.5s var(--ease-out-expo),
+      opacity 0.3s ease,
+      background-color 0.6s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .bubble-wrap > a,
+  .bubble-wrap > button {
+    position: relative;
+    z-index: 1;
+  }
+}

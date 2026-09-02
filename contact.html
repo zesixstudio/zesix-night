@@ -1,0 +1,65 @@
+<head>
+{{> head
+    title="Contact — Zesix Studio"
+    description="Talk to Zesix Studio, a Raipur digital marketing company. Call +91 9329185489, WhatsApp us, or send a note. Street 05, Gokul Nagar, Santoshi Nagar, Raipur."
+    path="/contact.html"
+}}
+</head>
+
+{{> lamp }}
+{{> header }}
+
+<main id="main" data-theme="blue">
+  <section class="phero grain">
+    <div class="glow-blue" style="width:44rem;height:44rem;right:-12rem;top:-14rem"></div>
+    <div class="container-x">
+      <p class="label" data-reveal>Contact</p>
+      <h1 class="text-display" data-reveal>Let's talk.</h1>
+      <p class="phero__sub text-lead" data-reveal>Tell us about the brand and what you need. We usually reply within one working day.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x ct-grid">
+      <div class="ct-card" data-reveal>
+        <h2>Reach us</h2>
+        <div class="ct-lines">
+          <div>
+            <p class="label">Call / WhatsApp</p>
+            <a href="tel:{{site.contact.phoneDial}}" data-cursor="Call">{{site.contact.phone}}</a><br />
+            <a href="#" data-wa="{{site.contact.whatsapp}}" data-wa-msg="{{site.contact.whatsappMessage}}" data-cursor="Chat">Message on WhatsApp</a>
+          </div>
+          <div>
+            <p class="label">Studio</p>
+            {{site.contact.addressLine}}<br />
+            <a href="{{site.contact.googleBusiness}}" target="_blank" rel="noopener">Google Business Profile</a>
+          </div>
+          <div>
+            <p class="label">Social</p>
+            <a href="{{site.social.instagram}}" target="_blank" rel="noopener">Instagram</a> &nbsp;
+            <a href="{{site.social.linkedin}}" target="_blank" rel="noopener">LinkedIn</a> &nbsp;
+            <a href="{{site.social.youtube}}" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <form class="ct-form" data-reveal action="https://formspree.io/f/your-id" method="POST">
+        <label>Name <input type="text" name="name" required autocomplete="name" /></label>
+        <label>Business <input type="text" name="business" autocomplete="organization" /></label>
+        <label>Phone or email <input type="text" name="contact" required /></label>
+        <label>What do you need? <textarea name="message" rows="4" required></textarea></label>
+        <button class="btn" type="submit" data-magnetic data-cursor="Send">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container-x">
+      <div class="ct-map" data-reveal>
+        <iframe src="{{site.contact.mapEmbed}}" title="Zesix Studio — Raipur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer }}

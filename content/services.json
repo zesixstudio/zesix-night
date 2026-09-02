@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "social-media-management",
+    "name": "Social Media Management",
+    "short": "Social",
+    "line": "We run the whole presence — strategy, content and growth.",
+    "long": "We don't just make posts. We plan a brand's monthly presence around a business goal, produce it as sets, publish it, and review what it did. Feeds that look considered and move the numbers.",
+    "color": "blue",
+    "art": "grid",
+    "points": [
+      "Content strategy & monthly plan",
+      "Creative posts & carousels",
+      "Reels & short-form video",
+      "Stories",
+      "Community & engagement",
+      "Reach & Meta ad management",
+      "Monthly performance review"
+    ],
+    "approach": [
+      "Start from the goal — awareness, leads or launches — not a posting calendar.",
+      "Blend brand-building content with conversion campaigns every month.",
+      "Shoot and design in batches so the feed stays consistent.",
+      "Report in business terms: reach, saves, enquiries."
+    ],
+    "card": "/assets/portfolio/classic-group/posts/02.jpg"
+  },
+  {
+    "slug": "creative-design",
+    "name": "Creative Design",
+    "short": "Design",
+    "line": "Campaign creative that stays on-brand at volume.",
+    "long": "The daily design engine behind a brand — social, campaign, festive, promotional and print. Built on one system so every piece looks like it belongs to the same brand.",
+    "color": "orange",
+    "art": "layers",
+    "points": [
+      "Social & campaign creatives",
+      "Festive & offer campaigns",
+      "Carousels & story sets",
+      "Print & promotional design",
+      "Reel covers & CTAs"
+    ],
+    "approach": [
+      "Work from a defined brand system, not one-off posts.",
+      "Design campaigns as a set, not a single frame.",
+      "Consider copy and design together.",
+      "Hold print and digital to the same standard."
+    ],
+    "card": "/assets/portfolio/ruchikara/posts/01.jpg"
+  },
+  {
+    "slug": "video-production",
+    "name": "Video Production",
+    "short": "Video",
+    "line": "Reels, ad films and AI-driven video that stop the scroll.",
+    "long": "Concept to final cut — reels, brand films, promos and AI-assisted video. Shot with the edit in mind, built for sound-off viewing, and packaged to perform.",
+    "color": "teal",
+    "art": "play",
+    "points": [
+      "Concept & scripting",
+      "Directed shoots",
+      "AI-driven reels",
+      "Ad films",
+      "Editing & motion graphics",
+      "YouTube channel management"
+    ],
+    "approach": [
+      "Open with a hook and a purpose.",
+      "Shoot with a plan for the edit so nothing is wasted.",
+      "Caption and design for muted playback.",
+      "Use AI where it makes the idea faster or bigger — not as a gimmick."
+    ],
+    "card": "/assets/portfolio/kaaya-unisex-salon/posts/02.jpg"
+  },
+  {
+    "slug": "influencer-marketing",
+    "name": "Influencer Marketing",
+    "short": "Influencer",
+    "line": "Local creators, planned campaigns, content that fits the brand.",
+    "long": "We identify the right creators, plan the campaign, run the shoot and produce the content — so collaborations actually look like your brand instead of a random paid post.",
+    "color": "blue",
+    "art": "spark",
+    "points": [
+      "Creator identification",
+      "Campaign planning",
+      "Shoot coordination",
+      "Branded collaboration content",
+      "Amplification"
+    ],
+    "approach": [
+      "Match creators to the audience, not the follower count.",
+      "Brief and storyboard before the shoot.",
+      "Direct on the day so it stays on-brand.",
+      "Amplify the best cuts with paid reach."
+    ],
+    "card": "/assets/portfolio/kaaya-unisex-salon/posts/01.jpg"
+  },
+  {
+    "slug": "branding",
+    "name": "Branding",
+    "short": "Branding",
+    "line": "Positioning and identity, taken all the way to print and out-of-home.",
+    "long": "From repositioning and identity to the hoarding, the pole kiosk and the newspaper page. A brand that looks the same on a phone and on a highway.",
+    "color": "orange",
+    "art": "frame",
+    "points": [
+      "Brand positioning & redesign",
+      "Logo & identity systems",
+      "Hoardings & billboards",
+      "Pole kiosks & outdoor",
+      "Expo & stall design",
+      "Newspaper advertising",
+      "Print & catalogues"
+    ],
+    "approach": [
+      "Start from market position, not a mood board.",
+      "Design a system — type, colour, layout — not just a logo.",
+      "Take it to production: print, install, out-of-home.",
+      "Ship usage guidance so it stays consistent."
+    ],
+    "card": "/assets/portfolio/classic-group/hoarding/01.jpg"
+  },
+  {
+    "slug": "digital-marketing",
+    "name": "Digital Marketing",
+    "short": "Growth",
+    "line": "Campaigns aimed at reach, leads and measurable growth.",
+    "long": "Paid campaigns, lead generation and content built to be measured and improved. We agree the metric that matters and optimise toward it.",
+    "color": "grey",
+    "art": "signal",
+    "points": [
+      "Paid campaigns (Meta, Google)",
+      "Lead generation",
+      "SEO & content",
+      "Landing pages",
+      "Tracking & reporting"
+    ],
+    "approach": [
+      "Define the audience and the action before spending.",
+      "Structure campaigns to be read and improved weekly.",
+      "Treat creative and targeting as one system.",
+      "Report leads and cost per result, not vanity metrics."
+    ],
+    "card": "/assets/portfolio/gymsane/posts/03.jpg"
+  }
+]

@@ -1,0 +1,38 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{title}}</title>
+<meta name="description" content="{{description}}" />
+<link rel="canonical" href="{{site.domain}}{{path}}" />
+
+<meta property="og:type" content="{{#if ogType}}{{ogType}}{{else}}website{{/if}}" />
+<meta property="og:site_name" content="{{site.name}}" />
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{description}}" />
+<meta property="og:url" content="{{site.domain}}{{path}}" />
+<meta property="og:image" content="{{site.domain}}/assets/og/default.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#0a0b0d" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Zesix Studio",
+  "description": "{{site.metaDescription}}",
+  "url": "{{site.domain}}",
+  "telephone": "{{site.contact.phone}}",
+  "foundingDate": "2022",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Street 05, Gokul Nagar, Santoshi Nagar",
+    "addressLocality": "Raipur",
+    "addressRegion": "Chhattisgarh",
+    "addressCountry": "IN"
+  },
+  "sameAs": ["{{site.social.instagram}}", "{{site.social.linkedin}}", "{{site.social.youtube}}", "{{site.contact.googleBusiness}}"]
+}
+</script>
+
+<script type="module" src="/src/main.js"></script>

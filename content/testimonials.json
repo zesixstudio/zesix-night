@@ -1,0 +1,26 @@
+{
+  "reel": {
+    "platform": "instagram",
+    "url": "https://www.instagram.com/reel/DPWS1iZCMmZ/",
+    "embed": "https://www.instagram.com/reel/DPWS1iZCMmZ/embed",
+    "caption": "Customise World — testimonial reel"
+  },
+  "tags": ["game-changer", "top-notch", "creative", "professional", "converts", "on-brand", "dedicated", "quality work"],
+  "items": [
+    {
+      "name": "Shishir Panchbhai",
+      "brand": "Gymsane – The Fitness Club",
+      "quote": "Service is awesome and the designs are absolutely amazing and creative. All the staff are very friendly and supportive, work is very professional — quality work and awesome content."
+    },
+    {
+      "name": "Ayush Madhariya",
+      "brand": "Laddoo Gopal Mobile World",
+      "quote": "Really like the top-notch work Zesix Studio does on every post of my business's social media. A big thumbs up to their dedication — highly recommend them for social media management."
+    },
+    {
+      "name": "Ankit Singhal",
+      "brand": "Elements",
+      "quote": "Working with Zesix Studio has been a game-changer for our brand. Their reels, posts and stories captured our essence and significantly boosted our branding and client engagement. Highly recommended for any business looking to make a mark on social media."
+    }
+  ]
+}

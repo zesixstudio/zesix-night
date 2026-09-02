@@ -1,0 +1,48 @@
+{
+  "name": "Zesix Studio",
+  "kind": "Digital marketing company",
+  "domain": "https://www.zesix.in",
+  "founded": 2022,
+  "experienceYears": "4+",
+  "city": "Raipur",
+  "tagline": "We make brands impossible to scroll past.",
+  "subline": "A digital marketing studio in Raipur — creative, strategy and execution in one place, powered by people and the latest AI.",
+  "metaDescription": "Zesix Studio is a Raipur digital marketing company. Social media, creative, reels, AI video, influencer marketing, branding and campaigns that connect and convert.",
+  "contact": {
+    "phone": "+91 9329185489",
+    "phoneDial": "+919329185489",
+    "whatsapp": "919329185489",
+    "whatsappMessage": "Hi Zesix Studio, I'd like to talk about a project.",
+    "email": "hello@zesix.in",
+    "addressLine": "Street 05, Gokul Nagar, Santoshi Nagar, Raipur",
+    "googleBusiness": "https://share.google/eAskDEoPoLOjlZz7S",
+    "mapEmbed": "https://www.google.com/maps?q=Gokul+Nagar+Santoshi+Nagar+Raipur&output=embed"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/zesixstudio",
+    "linkedin": "https://www.linkedin.com/company/zesix-studio",
+    "youtube": "https://www.youtube.com/@zesixstudio",
+    "founderLinkedin": "https://www.linkedin.com/in/shaad-razvi/"
+  },
+  "founder": {
+    "name": "Shaad Razvi",
+    "role": "Founder & Creative Director",
+    "linkedin": "https://www.linkedin.com/in/shaad-razvi/"
+  },
+  "stats": [
+    { "value": "4", "suffix": "+", "label": "Years in the industry" },
+    { "value": "20", "suffix": "+", "label": "Happy clients" },
+    { "value": "3500", "suffix": "+", "label": "Creative designs shipped" }
+  ],
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services.html" },
+    { "label": "Portfolio", "href": "/portfolio.html" },
+    { "label": "About us", "href": "/about.html" },
+    { "label": "Contact us", "href": "/contact.html" }
+  ],
+  "lamp": {
+    "offHeadline": "Creative People Don't Work At Day Time",
+    "offSubline": "Please turn on the lamp"
+  }
+}

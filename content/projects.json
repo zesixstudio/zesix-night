@@ -1,0 +1,135 @@
+[
+  {
+    "slug": "classic-group",
+    "name": "Classic Group",
+    "category": "Real Estate",
+    "feature": "case-study",
+    "accent": "#E8B84B",
+    "theme": "orange",
+    "logo": "/assets/portfolio/classic-group/logo.png",
+    "intro": "One of Raipur's established developers. We repositioned the group as a premium lifestyle brand, rebuilt its creative system, and ran always-on campaigns that turned attention into site visits.",
+    "highlights": [
+      { "value": "500", "suffix": "+", "label": "Quality leads generated" },
+      { "value": "Full", "suffix": "", "label": "Brand redesign" },
+      { "value": "Premium", "suffix": "", "label": "Market positioning" }
+    ],
+    "challenge": "Classic Group markets several residential projects — Classic Castle, Classic Towers, Sumeet Landscape — to an aspirational buyer. The brand looked like a dozen other local developers, and the marketing had to feel premium and stay consistent across formats as different as an Instagram carousel, a highway hoarding and a full newspaper page.",
+    "approach": "We rebuilt the identity around a single premium system, then built an always-on engine: a monthly creative series, AI-assisted walkthrough reels, an ad film, and an out-of-home rollout — hoardings, pole-kiosk routes and press. Every piece pointed to a lead form and was measured against cost per enquiry.",
+    "result": "A consistent, premium presence across every touchpoint and 500+ qualified leads from the campaigns — with the brand finally looking like the market leader it is.",
+    "showcase": [
+      { "label": "AI-driven reels", "mode": "gallery-video", "folder": "portfolio/classic-group/ai-reels", "services": ["video-production", "social-media-management"], "caption": "AI-assisted walkthrough and anniversary reels for Classic Castle & Towers." },
+      { "label": "Creative posts", "mode": "gallery", "folder": "portfolio/classic-group/posts", "services": ["creative-design", "social-media-management"], "caption": "A monthly creative series built around lifestyle, not spec sheets." },
+      { "label": "Hoarding", "mode": "mockup-billboard", "folder": "portfolio/classic-group/hoarding", "services": ["branding"], "caption": "20×10ft city hoarding for Classic Castle." },
+      { "label": "Newspaper advertising", "mode": "mockup-newspaper", "folder": "portfolio/classic-group/newspaper", "services": ["branding", "digital-marketing"], "caption": "Full-page press campaign." },
+      { "label": "Pole kiosks", "mode": "mockup-kiosk", "folder": "portfolio/classic-group/pole-kiosks", "services": ["branding"], "caption": "Route-wide pole-kiosk series." },
+      { "label": "Ad film", "mode": "video-embed", "items": ["https://www.youtube.com/embed/Z8eMbgahMt0"], "services": ["video-production"], "caption": "Ad film — concept, shoot and edit." },
+      { "label": "Influencer marketing", "mode": "ig-reel", "items": ["https://www.instagram.com/reel/DXwm9lNiqUx/", "https://www.instagram.com/reel/DXj15ebAm2q/", "https://www.instagram.com/reel/DXt5qAtk74l/"], "services": ["influencer-marketing"], "caption": "Local creator collaborations." }
+    ]
+  },
+  {
+    "slug": "customise-world",
+    "name": "Customise World",
+    "category": "Gifting Store",
+    "feature": "case-study",
+    "accent": "#7FB4D6",
+    "theme": "blue",
+    "logo": "/assets/portfolio/customise-world/logo.png",
+    "intro": "A personalised-gifting and wedding-hamper brand growing entirely on organic reach. One reel alone brought in 300+ new followers with no ad spend.",
+    "highlights": [
+      { "value": "300", "suffix": "+", "label": "Followers from a single reel, organically" },
+      { "value": "0", "suffix": "", "label": "Ad spend on that growth" },
+      { "value": "Organic", "suffix": "", "label": "Growth strategy" }
+    ],
+    "challenge": "Customise World sells premium personalised gifting — baby announcements, wedding hampers, corporate boxes. The brief was growth without a media budget: the content itself had to do the work.",
+    "approach": "We focused the feed on a few formats that travel — premium unboxing-style reels, announcement reels, and factory/behind-the-scenes cuts — and paired it with a properly designed 2025 digital catalogue and company profile so enquiries could be closed.",
+    "result": "Steady organic follower growth, including 300+ new followers from a single baby-announcement reel, and a sales toolkit that looks as premium as the product.",
+    "showcase": [
+      { "label": "Reels", "mode": "gallery-video", "folder": "portfolio/customise-world/reels", "services": ["social-media-management", "video-production"], "caption": "Announcement, hamper and factory reels built for organic reach." },
+      { "label": "Digital catalogue", "mode": "book-flip", "folder": "portfolio/customise-world/catalogue", "services": ["creative-design", "branding"], "caption": "The 2025 gifting catalogue — flip through it." },
+      { "label": "Company profile", "mode": "book-flip", "folder": "portfolio/customise-world/company-profile", "services": ["creative-design", "branding"], "caption": "Sales-ready company profile." }
+    ],
+    "testimonialReel": "https://www.instagram.com/reel/DPWS1iZCMmZ/embed"
+  },
+  {
+    "slug": "ruchikara",
+    "name": "Ruchikara",
+    "category": "Food & Gourmet Store",
+    "feature": "case-study",
+    "accent": "#C98A3E",
+    "theme": "orange",
+    "logo": "/assets/portfolio/ruchikara/logo.png",
+    "intro": "A premium gourmet, chocolate and hamper brand. The content had to look as considered as the packaging.",
+    "highlights": [
+      { "value": "Premium", "suffix": "", "label": "Brand positioning" },
+      { "value": "Festive", "suffix": "", "label": "Campaign engine" }
+    ],
+    "challenge": "Ruchikara competes with national gourmet names on the shelf and in the feed. Its social presence needed to feel indulgent and high-end, and to spike hard through Rakshabandhan and Diwali gifting season.",
+    "approach": "We built a feed of stop-motion and voiceover reels, an AI hamper promo, and festive campaign creative delivered as sets — then packaged the season into a Diwali Hampers catalogue for direct sales.",
+    "result": "A gourmet feed that holds its own beside the big brands, and a festive catalogue that turned the season into orders.",
+    "showcase": [
+      { "label": "Reels", "mode": "gallery-video", "folder": "portfolio/ruchikara/reels", "services": ["social-media-management", "video-production"], "caption": "Stop-motion, store voiceover and hamper reels." },
+      { "label": "AI-driven reel", "mode": "gallery-video", "folder": "portfolio/ruchikara/ai-reels", "services": ["video-production"], "caption": "AI-assisted hamper promo." },
+      { "label": "Creative posts", "mode": "gallery", "folder": "portfolio/ruchikara/posts", "services": ["creative-design"], "caption": "Festive campaign creative — Rakshabandhan, Diwali." },
+      { "label": "Diwali hampers catalogue", "mode": "book-flip", "folder": "portfolio/ruchikara/catalogue", "services": ["creative-design", "branding"], "caption": "The festive catalogue." }
+    ]
+  },
+  {
+    "slug": "kaaya-unisex-salon",
+    "name": "Kaaya Unisex Salon",
+    "category": "Salon",
+    "feature": "case-study",
+    "accent": "#D98BA6",
+    "theme": "grey",
+    "logo": "/assets/portfolio/kaaya-unisex-salon/logo.png",
+    "intro": "A premium unisex salon, built from the ground up — identity first, then a content engine that looked established from day one.",
+    "highlights": [
+      { "value": "0→1", "suffix": "", "label": "Full brand build from launch" },
+      { "value": "Identity", "suffix": "", "label": "Logo + brand system" }
+    ],
+    "challenge": "Kaaya opened into a crowded local salon market. It needed to look premium and current immediately — not like a new business finding its feet.",
+    "approach": "We designed the Kaaya identity and delivered it as a full brand book, then ran the content: bridal and glam reels, an AI facial reel, myth-vs-fact and FAQ carousels, and a nails testimonial reel — all on one visual system.",
+    "result": "A salon brand that reads as established and premium, with a feed that stays consistent week to week.",
+    "showcase": [
+      { "label": "Brand identity", "mode": "book-flip", "folder": "portfolio/kaaya-unisex-salon/brand-identity", "services": ["branding"], "caption": "The Kaaya brand book." },
+      { "label": "Reels", "mode": "gallery-video", "folder": "portfolio/kaaya-unisex-salon/reels", "services": ["social-media-management", "video-production"], "caption": "Bridal, glam and testimonial reels." },
+      { "label": "AI-driven reel", "mode": "gallery-video", "folder": "portfolio/kaaya-unisex-salon/ai-reels", "services": ["video-production"], "caption": "AI-assisted facial reel." },
+      { "label": "Creative posts", "mode": "gallery", "folder": "portfolio/kaaya-unisex-salon/posts", "services": ["creative-design", "social-media-management"], "caption": "Service, offer and education carousels." },
+      { "label": "Influencer marketing", "mode": "ig-reel", "items": ["https://www.instagram.com/reel/DXE3NWBAkx5/"], "services": ["influencer-marketing"], "caption": "Creator collaboration." }
+    ]
+  },
+  {
+    "slug": "riston-automobiles",
+    "name": "Riston Automobiles",
+    "category": "Automobile Brand",
+    "feature": "other",
+    "accent": "#C24B3A",
+    "theme": "grey",
+    "logo": "/assets/portfolio/riston-automobiles/logo.png",
+    "intro": "Engine oils and premium spare parts, positioned as the premium option in a price-led category.",
+    "challenge": "A category that usually competes on discount. Riston needed to look like the upgrade.",
+    "approach": "A run of premium, performance-led product creative and a product reel that treated engine oil like a hero product.",
+    "result": "A sharper, more premium shelf and feed presence.",
+    "showcase": [
+      { "label": "Creative posts", "mode": "gallery", "folder": "portfolio/riston-automobiles/posts", "services": ["creative-design"], "caption": "Premium product creative." },
+      { "label": "Product reel", "mode": "gallery-video", "folder": "portfolio/riston-automobiles/reels", "services": ["video-production", "social-media-management"], "caption": "Hero-product oil reel." }
+    ]
+  },
+  {
+    "slug": "gymsane",
+    "name": "Gymsane – The Fitness Club",
+    "category": "Fitness Centre",
+    "feature": "other",
+    "accent": "#5FBF8B",
+    "theme": "teal",
+    "logo": "/assets/portfolio/gymsane/logo.png",
+    "intro": "A fitness club with a bold, high-energy presence across social and out-of-home.",
+    "challenge": "Stand out in a city full of gyms with the same stock-photo look.",
+    "approach": "A high-energy monthly creative series and a pole-kiosk route that made the brand unavoidable on the commute.",
+    "result": "A distinct, ownable look on the feed and on the street.",
+    "showcase": [
+      { "label": "Creative posts", "mode": "gallery", "folder": "portfolio/gymsane/posts", "services": ["creative-design", "social-media-management"], "caption": "High-energy fitness creative series." },
+      { "label": "Pole kiosks", "mode": "mockup-kiosk", "folder": "portfolio/gymsane/pole-kiosks", "services": ["branding"], "caption": "Route-side pole kiosks." }
+    ],
+    "testimonial": { "name": "Shishir Panchbhai", "quote": "Service is awesome and the designs are absolutely amazing and creative. All the staff are friendly and supportive — quality work and awesome content." }
+  }
+]

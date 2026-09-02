@@ -1,0 +1,60 @@
+<head>
+{{> head
+    title="Portfolio — Zesix Studio"
+    description="Digital marketing work by Zesix Studio: case studies across real estate, gifting, food, salon, automobile and fitness — shown through mockups, galleries and flip-through catalogues."
+    path="/portfolio.html"
+}}
+</head>
+
+{{> lamp }}
+{{> header }}
+
+<main id="main" data-theme="blue">
+  <section class="phero grain">
+    <div class="glow-blue" style="width:44rem;height:44rem;right:-10rem;top:-14rem"></div>
+    <div class="container-x">
+      <p class="label" data-reveal>Portfolio</p>
+      <h1 class="text-display" data-reveal>Brands we've grown.</h1>
+      <p class="phero__sub text-lead" data-reveal>Every project is shown the way it was made &mdash; billboards and pole kiosks in mockups, posts and reels in galleries, catalogues you can flip through. Never raw files.</p>
+    </div>
+  </section>
+
+  <section class="section" data-worklist>
+    <div class="container-x">
+      <div class="wl-filters" data-reveal>
+        <div class="bubble-wrap glass" data-bubble-group>
+          <span class="bubble" data-bubble aria-hidden="true"></span>
+          <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="case-study" aria-pressed="false">Case studies</button>
+          <button class="chip" data-filter="other" aria-pressed="false">Clients</button>
+        </div>
+        <span class="wl-count" data-work-count></span>
+      </div>
+
+      <div class="wl-grid" data-reveal-group>
+        {{#each projects}}
+        <a class="wl-card" data-reveal-child data-work-card
+           data-tags="{{this.feature}} {{slugify this.category}}"
+           href="/portfolio/{{this.slug}}.html" data-cursor="Open" data-tilt>
+          <div class="wl-card__media">
+            <img src="{{this.logo}}" alt="{{this.name}} logo" loading="lazy"
+                 onerror="this.closest('.wl-card__media').classList.add('is-noimg')" />
+            <span class="wl-card__ghost" aria-hidden="true">{{this.name}}</span>
+          </div>
+          <div class="wl-card__body">
+            <span class="wl-card__cat">{{this.category}}</span>
+            <h3>{{this.name}}</h3>
+            <p>{{this.intro}}</p>
+            <span class="wl-card__tag">{{#if (eq this.feature "case-study")}}Case study{{else}}Client{{/if}}</span>
+          </div>
+        </a>
+        {{/each}}
+      </div>
+      <p class="wl-empty" data-work-empty hidden>Nothing matches that filter.</p>
+    </div>
+  </section>
+
+  {{> cta }}
+</main>
+
+{{> footer }}

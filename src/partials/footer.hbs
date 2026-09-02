@@ -1,0 +1,41 @@
+<footer class="ft grain">
+  <div class="container-x ft__inner">
+    <div class="ft__lead">
+      <a href="/" class="ft__brand" aria-label="Zesix Studio — home">{{> logo }}</a>
+      <p class="text-lead">{{site.subline}}</p>
+      <a class="btn" href="/contact.html" data-magnetic>Start a project</a>
+    </div>
+    <div class="ft__cols">
+      <div>
+        <h3>Sitemap</h3>
+        <ul>{{#each site.nav}}<li><a class="link-u" href="{{this.href}}">{{this.label}}</a></li>{{/each}}</ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>{{#each services}}<li><a class="link-u" href="/services/{{this.slug}}.html">{{this.name}}</a></li>{{/each}}</ul>
+      </div>
+      <div>
+        <h3>Studio</h3>
+        <ul>
+          <li>{{site.contact.addressLine}}</li>
+          <li><a class="link-u" href="tel:{{site.contact.phoneDial}}">{{site.contact.phone}}</a></li>
+          <li><a class="link-u" href="#" data-wa="{{site.contact.whatsapp}}" data-wa-msg="{{site.contact.whatsappMessage}}">WhatsApp</a></li>
+          <li><a class="link-u" href="{{site.contact.googleBusiness}}" target="_blank" rel="noopener">Google Business</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <ul>
+          <li><a class="link-u" href="{{site.social.instagram}}" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a class="link-u" href="{{site.social.linkedin}}" target="_blank" rel="noopener">LinkedIn — Company</a></li>
+          <li><a class="link-u" href="{{site.social.founderLinkedin}}" target="_blank" rel="noopener">LinkedIn — Founder</a></li>
+          <li><a class="link-u" href="{{site.social.youtube}}" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-x ft__base">
+    <p>&copy; <span data-year>{{year}}</span> {{site.name}} — {{site.kind}}, {{site.city}}. {{site.experienceYears}} years in the industry.</p>
+    <p><a class="link-u" href="/terms.html">Terms</a> · <a class="link-u" href="/privacy.html">Privacy</a></p>
+  </div>
+</footer>

@@ -1,0 +1,375 @@
+/* Service index/pages, founder journey, case-study narrative, mockups.
+   Loaded from tailwind.css. */
+
+@layer components {
+  /* ---- services index tiles ---- */
+  .svc-index__grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .svc-tile {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-out-expo), border-color 0.3s ease;
+  }
+  .svc-tile a {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .svc-tile__art {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--color-surface-2);
+  }
+  .svc-tile__art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo), filter 0.4s ease;
+    filter: saturate(0.85) brightness(0.8);
+  }
+  .svc-tile:hover .svc-tile__art img {
+    transform: scale(1.05);
+    filter: saturate(1) brightness(0.95);
+  }
+  .svc-tile__art.is-noimg::after {
+    content: 'Zesix Studio';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+  .svc-tile__body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .svc-tile__no {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--sec-accent, var(--color-blue));
+  }
+  .svc-tile__body h2 {
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+  }
+  .svc-tile__body > p {
+    color: var(--color-muted);
+  }
+  .svc-tile__pts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
+    margin: 0.4rem 0 0.6rem;
+  }
+  .svc-tile__pts li {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-faint);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-pill);
+    padding: 0.25rem 0.6rem;
+  }
+  .svc-tile__go {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-text);
+    margin-top: auto;
+  }
+  @media (min-width: 760px) {
+    .svc-index__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1080px) {
+    .svc-index__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .band-glass {
+    position: relative;
+  }
+  .combo {
+    max-width: 46rem;
+    margin-inline: auto;
+    text-align: center;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  /* ---- service detail pages ---- */
+  .svc-hero {
+    position: relative;
+    padding-top: clamp(2.5rem, 6vw, 4rem);
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
+    overflow: hidden;
+  }
+  .svc-hero .cs-back {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-bottom: 1.25rem;
+  }
+  .svc-hero h1 {
+    margin: 0.75rem 0 1.25rem;
+  }
+  .svc-hero__line {
+    max-width: 44rem;
+  }
+  .svc-hero .btn {
+    margin-top: 1.75rem;
+  }
+  .svc-detail__grid {
+    display: grid;
+    gap: 3rem;
+  }
+  .svc-detail__grid .label {
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+  .svc-detail__list {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .svc-detail__list li {
+    padding-left: 1.4rem;
+    position: relative;
+    color: var(--color-text);
+  }
+  .svc-detail__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--sec-accent, var(--color-blue));
+  }
+  .svc-detail__steps {
+    display: grid;
+    gap: 1rem;
+    counter-reset: a;
+  }
+  .svc-detail__steps li {
+    counter-increment: a;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--color-muted);
+  }
+  .svc-detail__steps li::before {
+    content: counter(a, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--sec-accent, var(--color-blue));
+  }
+  @media (min-width: 860px) {
+    .svc-detail__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+  .svc-work__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .svc-work__grid .tile {
+    aspect-ratio: 4 / 5;
+    display: block;
+  }
+  .tile__cap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .tile:hover .tile__cap {
+    opacity: 1;
+  }
+  .svc-work__used {
+    margin-top: 2rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+  @media (min-width: 720px) {
+    .svc-work__grid {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+  }
+
+  /* ---- case study narrative ---- */
+  .cs-narr {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem);
+    border-bottom: 1px solid var(--color-line-soft);
+  }
+  .cs-narr__row {
+    display: grid;
+    gap: 0.75rem 2.5rem;
+    padding-block: 1.5rem;
+    border-top: 1px solid var(--color-line-soft);
+  }
+  .cs-narr__row:first-child {
+    border-top: 0;
+  }
+  .cs-narr__row .label {
+    align-self: start;
+  }
+  .cs-narr__row p {
+    color: var(--color-text);
+    font-size: 1.05rem;
+    max-width: 48rem;
+  }
+  @media (min-width: 820px) {
+    .cs-narr__row {
+      grid-template-columns: 10rem 1fr;
+    }
+  }
+
+  .sc-block__svcs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
+    margin-top: 0.9rem;
+  }
+  .sc-block__svc {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sec-accent, var(--color-blue));
+    border: 1px solid color-mix(in srgb, var(--sec-accent, #88bee6) 30%, transparent);
+    border-radius: var(--radius-pill);
+    padding: 0.25rem 0.65rem;
+  }
+
+  /* ---- tile play glyph ---- */
+  .tile__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(10, 21, 32, 0.5);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+  }
+  .tile__play::after {
+    content: '';
+    position: absolute;
+    left: 54%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 7px 0 7px 12px;
+    border-color: transparent transparent transparent #fff;
+  }
+  .tile--empty .tile__play {
+    display: none;
+  }
+
+  /* ---- multi-frame mockups ---- */
+  .sc-mocks {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .sc-mocks--kiosk {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  }
+  .sc-mocks--newspaper {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+
+  /* ---- founder journey ---- */
+  .founder__intro {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: start;
+  }
+  .founder__badge {
+    width: 8rem;
+    height: 8rem;
+    border-radius: var(--radius-lg);
+    display: grid;
+    place-items: center;
+  }
+  .founder__mono {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--sec-accent, var(--color-blue));
+  }
+  .founder__role {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin: 0.35rem 0 1rem;
+  }
+  .founder__intro .btn {
+    margin-top: 1.25rem;
+  }
+  @media (min-width: 760px) {
+    .founder__intro {
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+    }
+  }
+  .timeline {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .timeline li {
+    display: grid;
+    gap: 0.5rem 2rem;
+    padding-block: 1.75rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .timeline__year {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sec-accent, var(--color-blue));
+    padding-top: 0.2rem;
+  }
+  .timeline li h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  .timeline li p {
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+  @media (min-width: 780px) {
+    .timeline li {
+      grid-template-columns: 10rem 1fr;
+    }
+  }
+}
